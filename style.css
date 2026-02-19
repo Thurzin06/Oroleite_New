@@ -399,6 +399,7 @@ p {
     color: white;
     max-width: 800px;
     animation: slideUp 1s ease-out;
+    margin-top: var(--space-8);
 }
 
 @keyframes slideUp {
@@ -830,6 +831,130 @@ p {
     line-height: 1.6;
 }
 
+/* Contacts table inside contact items */
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* hide header visually to match the provided sample */
+.contacts-table thead {
+    display: none;
+}
+
+.contacts-table tbody tr {
+    background: #1f2937; /* dark row */
+}
+
+.contacts-table tbody td {
+    padding: 0.45rem 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    vertical-align: middle;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+.contacts-table tbody tr + tr td {
+    /* subtle separator */
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.contacts-table tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.contacts-table td:first-child {
+    color: #ffffff;
+    font-weight: 600;
+    width: 65%;
+}
+
+.contacts-table td:last-child {
+    text-align: right;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.contacts-table a {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Mobile: allow horizontal scroll instead of stacking rows */
+@media (max-width: 768px) {
+    .contacts-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .contacts-table tbody td {
+        display: inline-block;
+        vertical-align: middle;
+        white-space: normal;
+    }
+    .contacts-table td:last-child {
+        text-align: left;
+        margin-left: 1rem;
+    }
+}
+
+/* Horizontal contacts list (replacement for table) */
+.contacts-list {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: #1f2937;
+    color: #fff;
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    min-width: 260px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-name {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.contact-phone {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .contacts-list {
+        gap: 0.5rem;
+    }
+    .contact-row {
+        min-width: 200px;
+        padding: 0.35rem 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-list {
+        display: block;
+    }
+    .contact-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+}
+
 /* Contact Form */
 .contact__form {
     display: flex;
@@ -1017,6 +1142,12 @@ p {
         font-size: var(--text-base);
     }
 
+    /* Reduce top offset on smaller screens */
+    .hero-slide__content {
+        margin-top: var(--space-6);
+        padding: 0 var(--space-4);
+    }
+
     /* Sections */
     .section {
         padding: var(--space-8) 0 var(--space-6) 0;
@@ -1089,6 +1220,11 @@ p {
     .hero-slide__subtitle {
         font-size: var(--text-sm);
         margin-bottom: var(--space-4);
+    }
+
+    .hero-slide__content {
+        margin-top: var(--space-4);
+        padding: 0 var(--space-3);
     }
 
     /* Typography */

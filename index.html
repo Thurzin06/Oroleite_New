@@ -1,445 +1,617 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oroleite - Distribuidor de Alimentos Premium</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- HEADER -->
     <header class="header" id="header">
-        <div class="header__container">
-            <a href="#" class="logo">
-                <img src="img/logo.png" alt="Oroleite logo" class="logo__img">
-                <span class="logo__text"></span>
-            </a>
+      <div class="header__container">
+        <a href="#" class="logo">
+          <img src="img/logo.png" alt="Oroleite logo" class="logo__img" />
+          <span class="logo__text"></span>
+        </a>
 
-            <nav class="menu" id="menu">
-                <a href="#inicio" class="menu__link">Início</a>
-                <a href="#empresa" class="menu__link">Empresa</a>
-                <a href="#diferenciais" class="menu__link">Diferenciais</a>
-                <a href="#categorias" class="menu__link">Categorias</a>
-                <a href="#marcas" class="menu__link">Marcas</a>
-                <a href="#cobertura" class="menu__link">Cobertura</a>
-                <a href="#contato" class="menu__link">Contato</a>
-            </nav>
+        <nav class="menu" id="menu">
+          <a href="#inicio" class="menu__link">Início</a>
+          <a href="#empresa" class="menu__link">Empresa</a>
+          <a href="#diferenciais" class="menu__link">Diferenciais</a>
+          <a href="#categorias" class="menu__link">Categorias</a>
+          <a href="#marcas" class="menu__link">Marcas</a>
+          <a href="#cobertura" class="menu__link">Cobertura</a>
+          <a href="#contato" class="menu__link">Contato</a>
+        </nav>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-            <a href="#contato" class="btn btn--primary btn--sm">Solicitar Orçamento</a>
-        </div>
+        <a href="#contato" class="btn btn--primary btn--sm"
+          >Solicitar Orçamento</a
+        >
+      </div>
     </header>
 
     <!-- HERO -->
     <section class="hero" id="inicio">
-        <div class="hero__slider" id="heroSlider">
-            <div class="hero-slide active">
-                <img src="icons/FundoEntrega.png" alt="Grandes marcas de distribuição" class="hero-slide__img">
-                <div class="hero-slide__overlay"></div>
-                <div class="hero-slide__content">
-                    <h1 class="hero-slide__title">Distribuindo Para Grandes Marcas!</h1>
-                    <p class="hero-slide__subtitle">7 anos distribuindo produtos alimentícios com excelência</p>
-                    <a href="#contato" class="btn btn--primary btn--lg">Solicitar Orçamento</a>
-                </div>
-            </div>
-
-            <div class="hero-slide">
-                <img src="icons/Logistica.png" alt="Entrega rápida" class="hero-slide__img">
-                <div class="hero-slide__overlay"></div>
-                <div class="hero-slide__content">
-                    <h1 class="hero-slide__title">Entrega Rápida e Confiável</h1>
-                    <p class="hero-slide__subtitle">Logística otimizada para sua região</p>
-                    <a href="#contato" class="btn btn--primary btn--lg">Solicitar Orçamento</a>
-                </div>
-            </div>
-
-            <div class="hero-slide">
-                <img src="icons/SAC.png" alt="Atendimento especializado" class="hero-slide__img">
-                <div class="hero-slide__overlay"></div>
-                <div class="hero-slide__content">
-                    <h1 class="hero-slide__title">Atendimento Especializado</h1>
-                    <p class="hero-slide__subtitle">Equipe dedicada ao seu sucesso</p>
-                    <a href="#contato" class="btn btn--primary btn--lg">Solicitar Orçamento</a>
-                </div>
-            </div>
+      <div class="hero__slider" id="heroSlider">
+        <div class="hero-slide active">
+          <img
+            src="icons/FundoEntrega.png"
+            alt="Grandes marcas de distribuição"
+            class="hero-slide__img"
+          />
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__content">
+            <h1 class="hero-slide__title">Distribuindo Para Grandes Marcas!</h1>
+            <p class="hero-slide__subtitle">
+              7 anos distribuindo produtos alimentícios com excelência
+            </p>
+            <a href="#contato" class="btn btn--primary btn--lg"
+              >Solicitar Orçamento</a
+            >
+          </div>
         </div>
 
-        <div class="hero__dots" id="heroDots"></div>
+        <div class="hero-slide">
+          <img
+            src="icons/Logistica.png"
+            alt="Entrega rápida"
+            class="hero-slide__img"
+          />
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__content">
+            <h1 class="hero-slide__title">Entrega Rápida e Confiável</h1>
+            <p class="hero-slide__subtitle">
+              Logística otimizada para sua região
+            </p>
+            <a href="#contato" class="btn btn--primary btn--lg"
+              >Solicitar Orçamento</a
+            >
+          </div>
+        </div>
+
+        <div class="hero-slide">
+          <img
+            src="icons/SAC.png"
+            alt="Atendimento especializado"
+            class="hero-slide__img"
+          />
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__content">
+            <h1 class="hero-slide__title">Atendimento Especializado</h1>
+            <p class="hero-slide__subtitle">Equipe dedicada ao seu sucesso</p>
+            <a href="#contato" class="btn btn--primary btn--lg"
+              >Solicitar Orçamento</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__dots" id="heroDots"></div>
     </section>
 
     <!-- BRAND LOGOS STRIP -->
     <section class="brands-strip">
-        <div class="container">
-            <div class="brands-grid">
-                <div class="brand-logo">
-                    <img src="icons/nestle1.png" alt="Nestlé">
-                </div>
-                <div class="brand-logo">
-                    <img src="icons/peccin.png" alt="Peccin">
-                </div>
-                <div class="brand-logo">
-                    <img src="icons/bauducco.png" alt="Bauduco">
-                </div>
-                <div class="brand-logo">
-                    <img src="icons/life.png" alt="Life">
-                </div>
-                <div class="brand-logo">
-                    <img src="icons/puri.png" alt="Puri">
-                </div>
-            </div>
+      <div class="container">
+        <div class="brands-grid">
+          <div class="brand-logo">
+            <img src="icons/nestle1.png" alt="Nestlé" />
+          </div>
+          <div class="brand-logo">
+            <img src="icons/peccin.png" alt="Peccin" />
+          </div>
+          <div class="brand-logo">
+            <img src="icons/bauducco.png" alt="Bauduco" />
+          </div>
+          <div class="brand-logo">
+            <img src="icons/life.png" alt="Life" />
+          </div>
+          <div class="brand-logo">
+            <img src="icons/puri.png" alt="Puri" />
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- ABOUT SECTION -->
     <section class="section about" id="empresa">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Sobre a Oroleite</h2>
-                <p class="section__subtitle">Excelência em distribuição de alimentos há 7 anos </p>
-            </div>
-
-            <div class="about__grid">
-                <div class="about__content">
-                    <p class="about__text">
-                        A Oroleite é uma distribuidora de alimentos especializada em fornecer produtos de qualidade premium para estabelecimentos comerciais em toda a região. Com mais de 26 anos de atuação, consolidamos nossa reputação através de atendimento exemplar, produtos selecionados e logística eficiente.
-                    </p>
-                    <p class="about__text">
-                        Nossa missão é ser o parceiro confiável de todas as empresas que buscam excelência em seus negócios, oferecendo produtos alimentícios de primeira qualidade com entregas pontuais e atendimento personalizado.
-                    </p>
-
-                    <div class="stats">
-                        <div class="stat">
-                            <h3 class="stat__number">7+</h3>
-                            <p class="stat__label">Anos de experiência</p>
-                        </div>
-                        <div class="stat">
-                            <h3 class="stat__number">1.500+</h3>
-                            <p class="stat__label">Clientes satisfeitos</p>
-                        </div>
-                        <div class="stat">
-                            <h3 class="stat__number">15+</h3>
-                            <p class="stat__label">Marcas parceiras</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about__image">
-                    <img src="img/Empresa.jpeg" alt="Equipe Oroleite" class="image-cover">
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Sobre a Oroleite</h2>
+          <p class="section__subtitle">
+            Excelência em distribuição de alimentos há 7 anos
+          </p>
         </div>
+
+        <div class="about__grid">
+          <div class="about__content">
+            <p class="about__text">
+              A Oroleite é uma distribuidora de alimentos especializada em
+              fornecer produtos de qualidade premium para estabelecimentos
+              comerciais em toda a região. Com mais de 7 anos de atuação,
+              consolidamos nossa reputação através de atendimento exemplar,
+              produtos selecionados e logística eficiente.
+            </p>
+            <p class="about__text">
+              Missão: Ser a principal empresa de distribuição de alimentos em
+              Santa Catarina, promovendo o crescimento e o desenvolvimento de
+              nossos colaboradores. Atuamos com honestidade, justiça e
+              integridade em todas as nossas ações. <br> 
+              Visão: Ser reconhecida como
+              uma empresa ágil, determinada, inovadora e eficiente,
+              destacando-se entre as melhores distribuidoras catarinenses de
+              marcas premium. Nossa meta é ser vista como uma empresa dinâmica,
+              coerente e ética, que mantém relacionamentos sólidos e de
+              confiança com clientes, consumidores, fornecedores, colaboradores
+              e a comunidade em que estamos inseridos.
+            </p>
+
+            <div class="stats">
+              <div class="stat">
+                <h3 class="stat__number">7+</h3>
+                <p class="stat__label">Anos de experiência</p>
+              </div>
+              <div class="stat">
+                <h3 class="stat__number">1.500+</h3>
+                <p class="stat__label">Clientes satisfeitos</p>
+              </div>
+              <div class="stat">
+                <h3 class="stat__number">15+</h3>
+                <p class="stat__label">Marcas parceiras</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__image">
+            <img
+              src="img/Empresa.jpeg"
+              alt="Equipe Oroleite"
+              class="image-cover"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- DIFFERENTIALS SECTION -->
     <section class="section differentials" id="diferenciais">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Por que escolher a Oroleite?</h2>
-                <p class="section__subtitle">Diferenciais que garantem seu sucesso</p>
-            </div>
-
-            <div class="cards-grid cards-grid--3">
-                <div class="card card-feature">
-                    <div class="card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L15.09 8.26H22L17.45 12.51L19.54 18.76L12 14.51L4.46 18.76L6.55 12.51L2 8.26H8.91L12 2Z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card__title">Qualidade Garantida</h3>
-                    <p class="card__text">Produtos selecionados e certificados, com rigoroso controle de qualidade</p>
-                </div>
-
-                <div class="card card-feature">
-                    <div class="card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 11l3 3L22 4"></path>
-                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card__title">Entrega Rápida</h3>
-                    <p class="card__text">Logística otimizada com prazos cumpridos garantindo sua operação</p>
-                </div>
-
-                <div class="card card-feature">
-                    <div class="card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 14l6-6"></path>
-                            <path d="M12 2a10 10 0 1110 10A10 10 0 0112 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card__title">Suporte Dedicado</h3>
-                    <p class="card__text">Equipe especializada pronta para atender suas necessidades 24/7</p>
-                </div>
-
-                <div class="card card-feature">
-                    <div class="card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card__title">Preços Competitivos</h3>
-                    <p class="card__text">Condições especiais para clientes com grande volume</p>
-                </div>
-
-                <div class="card card-feature">
-                    <div class="card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="card__title">Variedade Completa</h3>
-                    <p class="card__text">Amplo portfólio de produtos para atender todas as necessidades</p>
-                </div>
-
-                <div class="card card-feature">
-                    <div class="card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card__title">Conformidade Legal</h3>
-                    <p class="card__text">Todos os produtos com documentação e certificações em dia</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Por que escolher a Oroleite?</h2>
+          <p class="section__subtitle">Diferenciais que garantem seu sucesso</p>
         </div>
+
+        <div class="cards-grid cards-grid--3">
+          <div class="card card-feature">
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 2L15.09 8.26H22L17.45 12.51L19.54 18.76L12 14.51L4.46 18.76L6.55 12.51L2 8.26H8.91L12 2Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="card__title">Qualidade Garantida</h3>
+            <p class="card__text">
+              Produtos selecionados e certificados, com rigoroso controle de
+              qualidade
+            </p>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 11l3 3L22 4"></path>
+                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="card__title">Entrega Rápida</h3>
+            <p class="card__text">
+              Logística otimizada com prazos cumpridos garantindo sua operação
+            </p>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M14 14l6-6"></path>
+                <path d="M12 2a10 10 0 1110 10A10 10 0 0112 2z"></path>
+              </svg>
+            </div>
+            <h3 class="card__title">Suporte Dedicado</h3>
+            <p class="card__text">
+              Equipe especializada pronta para atender suas necessidades 24/7
+            </p>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="card__title">Preços Competitivos</h3>
+            <p class="card__text">
+              Condições especiais para clientes com grande volume
+            </p>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="card__title">Variedade Completa</h3>
+            <p class="card__text">
+              Amplo portfólio de produtos para atender todas as necessidades
+            </p>
+          </div>
+
+          <div class="card card-feature">
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="card__title">Conformidade Legal</h3>
+            <p class="card__text">
+              Todos os produtos com documentação e certificações em dia
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CATEGORIES SECTION -->
     <section class="section categories" id="categorias">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Nossas Categorias</h2>
-                <p class="section__subtitle">Ampla gama de produtos para seu negócio</p>
-            </div>
-
-            <div class="cards-grid cards-grid--4">
-                <div class="card card-category">
-                    <div class="card__image">
-                        <img src="https://picsum.photos/300/250?random=1" alt="Bebidas">
-                    </div>
-                    <h3 class="card__title">Bebidas</h3>
-                    <p class="card__text">Bebidas variadas para todos os gostos e ocasiões</p>
-                    <a href="#contato" class="card__link">Consultar →</a>
-                </div>
-
-                <div class="card card-category">
-                    <div class="card__image">
-                        <img src="https://picsum.photos/300/250?random=2" alt="Mercearia">
-                    </div>
-                    <h3 class="card__title">Mercearia</h3>
-                    <p class="card__text">Produtos de mercearia geral de excelente qualidade</p>
-                    <a href="#contato" class="card__link">Consultar →</a>
-                </div>
-
-                <div class="card card-category">
-                    <div class="card__image">
-                        <img src="https://picsum.photos/300/250?random=3" alt="Congelados">
-                    </div>
-                    <h3 class="card__title">Congelados</h3>
-                    <p class="card__text">Alimentos congelados mantendo a melhor qualidade</p>
-                    <a href="#contato" class="card__link">Consultar →</a>
-                </div>
-
-                
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Nossas Categorias</h2>
+          <p class="section__subtitle">
+            Ampla gama de produtos para seu negócio
+          </p>
         </div>
+
+        <div class="cards-grid cards-grid--4">
+          <div class="card card-category">
+            <div class="card__image">
+              <img src="https://picsum.photos/300/250?random=1" alt="Bebidas" />
+            </div>
+            <h3 class="card__title">Bebidas</h3>
+            <p class="card__text">
+              Bebidas variadas para todos os gostos e ocasiões
+            </p>
+            <a href="#contato" class="card__link">Consultar →</a>
+          </div>
+
+          <div class="card card-category">
+            <div class="card__image">
+              <img
+                src="https://picsum.photos/300/250?random=2"
+                alt="Mercearia"
+              />
+            </div>
+            <h3 class="card__title">Mercearia</h3>
+            <p class="card__text">
+              Produtos de mercearia geral de excelente qualidade
+            </p>
+            <a href="#contato" class="card__link">Consultar →</a>
+          </div>
+
+          <div class="card card-category">
+            <div class="card__image">
+              <img
+                src="https://picsum.photos/300/250?random=3"
+                alt="Congelados"
+              />
+            </div>
+            <h3 class="card__title">Congelados</h3>
+            <p class="card__text">
+              Alimentos congelados mantendo a melhor qualidade
+            </p>
+            <a href="#contato" class="card__link">Consultar →</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- BRANDS SECTION -->
     <section class="section brands" id="marcas">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Marcas Parceiras</h2>
-                <p class="section__subtitle">Distribuímos as melhores marcas do mercado</p>
-            </div>
-
-            <div class="brands-showcase">
-                <div class="brand-item">
-                    <img src="icons/nestle1.png" alt="Nestlé">
-                </div>
-                <div class="brand-item">
-                    <img src="icons/peccin.png" alt="Peccin">
-                </div>
-                <div class="brand-item">
-                    <img src="icons/bauducco.png" alt="Bauduco">
-                </div>
-                <div class="brand-item">
-                    <img src="icons/life.png" alt="Life">
-                </div>
-                <div class="brand-item">
-                    <img src="icons/puri.png" alt="Puri">
-                </div>
-                <div class="brand-item">
-                    <img src="icons/zinho.png" alt="Zinho">
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Marcas Parceiras</h2>
+          <p class="section__subtitle">
+            Distribuímos as melhores marcas do mercado
+          </p>
         </div>
+
+        <div class="brands-showcase">
+          <div class="brand-item">
+            <img src="icons/nestle1.png" alt="Nestlé" />
+          </div>
+          <div class="brand-item">
+            <img src="icons/peccin.png" alt="Peccin" />
+          </div>
+          <div class="brand-item">
+            <img src="icons/bauducco.png" alt="Bauduco" />
+          </div>
+          <div class="brand-item">
+            <img src="icons/life.png" alt="Life" />
+          </div>
+          <div class="brand-item">
+            <img src="icons/puri.png" alt="Puri" />
+          </div>
+          <div class="brand-item">
+            <img src="icons/zinho.png" alt="Zinho" />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- COVERAGE SECTION -->
     <section class="section coverage" id="cobertura">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Nossa Cobertura</h2>
-                <p class="section__subtitle">Servimos toda a região com excelência</p>
-            </div>
-
-            <div class="coverage__content">
-                <div class="coverage__map">
-                    <img src="https://picsum.photos/600/400?random=30" alt="Mapa de cobertura">
-                </div>
-                <div class="coverage__info">
-                    <h3 class="coverage__title">Abrangência Regional</h3>
-                    <p class="coverage__text">
-                        Operamos em toda a região, garantindo entregas pontuais e eficientes para sua localização.
-                    </p>
-
-                    <ul class="coverage__list">
-                        <li class="coverage__item">
-                            <span class="coverage__icon">📍</span>
-                            <span>Entrega em 24-48 horas na região</span>
-                        </li>
-                        <li class="coverage__item">
-                            <span class="coverage__icon">🚚</span>
-                            <span>Frota própria e moderna</span>
-                        </li>
-                        <li class="coverage__item">
-                            <span class="coverage__icon">📞</span>
-                            <span>Suporte direto ao cliente</span>
-                        </li>
-                        <li class="coverage__item">
-                            <span class="coverage__icon">✓</span>
-                            <span>Rastreamento em tempo real</span>
-                        </li>
-                    </ul>
-
-                    <a href="#contato" class="btn btn--primary">Verificar Entrega</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Nossa Cobertura</h2>
+          <p class="section__subtitle">Servimos toda a região com excelência</p>
         </div>
+
+        <div class="coverage__content">
+          <div class="coverage__map">
+            <img
+              src="https://picsum.photos/600/400?random=30"
+              alt="Mapa de cobertura"
+            />
+          </div>
+          <div class="coverage__info">
+            <h3 class="coverage__title">Abrangência Regional</h3>
+            <p class="coverage__text">
+              Operamos em toda a região, garantindo entregas pontuais e
+              eficientes para sua localização.
+            </p>
+
+            <ul class="coverage__list">
+              <li class="coverage__item">
+                <span class="coverage__icon">📍</span>
+                <span>Entrega em 24-48 horas na região</span>
+              </li>
+              <li class="coverage__item">
+                <span class="coverage__icon">🚚</span>
+                <span>Frota própria e moderna</span>
+              </li>
+              <li class="coverage__item">
+                <span class="coverage__icon">📞</span>
+                <span>Suporte direto ao cliente</span>
+              </li>
+              <li class="coverage__item">
+                <span class="coverage__icon">✓</span>
+                <span>Rastreamento em tempo real</span>
+              </li>
+            </ul>
+
+            <a href="#contato" class="btn btn--primary">Verificar Entrega</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA SECTION -->
     <section class="cta-section">
-        <div class="container">
-            <div class="cta__content">
-                <h2 class="cta__title">Pronto para trabalhar conosco?</h2>
-                <p class="cta__text">Entre em contato e conheça nossas condições especiais</p>
-                <a href="#contato" class="btn btn--white btn--lg">Solicitar Orçamento</a>
-            </div>
+      <div class="container">
+        <div class="cta__content">
+          <h2 class="cta__title">Pronto para trabalhar conosco?</h2>
+          <p class="cta__text">
+            Entre em contato e conheça nossas condições especiais
+          </p>
+          <a href="#contato" class="btn btn--white btn--lg"
+            >Solicitar Orçamento</a
+          >
         </div>
+      </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section class="section contact" id="contato">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Entre em Contato</h2>
-                <p class="section__subtitle">Estamos prontos para ajudar seu negócio</p>
-            </div>
-
-            <div class="contact__grid">
-                <div class="contact__info">
-                    <div class="contact-item">
-                        <h3 class="contact-item__title">📞 Telefone</h3>
-                        <p class="contact-item__text">(48) 99999-9999</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <h3 class="contact-item__title">📧 Email</h3>
-                        <p class="contact-item__text">contato@oroleite.com.br</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <h3 class="contact-item__title">📍 Localização</h3>
-                        <p class="contact-item__text">Sua Cidade, Estado - Brasil</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <h3 class="contact-item__title">⏰ Horário</h3>
-                        <p class="contact-item__text">Seg-Sex: 8h às 18h<br>Sábado: 8h às 12h</p>
-                    </div>
-                </div>
-
-                <form class="contact__form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Seu nome" required class="form__input">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Seu email" required class="form__input">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Seu telefone" class="form__input">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Sua mensagem" rows="5" required class="form__textarea"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--block">Enviar Mensagem</button>
-                </form>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Entre em Contato</h2>
+          <p class="section__subtitle">
+            Estamos prontos para ajudar seu negócio
+          </p>
         </div>
+
+        <div class="contact__grid">
+          <div class="contact__info">
+            <div class="contact-item">
+              <h3 class="contact-item__title">📧 Email</h3>
+              <p class="contact-item__text">oroleite@oroleite.com.br</p>
+            </div>
+
+            <div class="contact-item">
+              <h3 class="contact-item__title">📍 Localização</h3>
+              <p class="contact-item__text">R. Araponga, 175 - Praça, Tijucas - SC, 88200-000</p>
+            </div>
+
+            <div class="contact-item">
+              <h3 class="contact-item__title">⏰ Horário</h3>
+              <p class="contact-item__text">
+                Seg-Sex: 8h às 18h<br />
+              </p>
+            </div>
+            <div class="contact-item">
+              <h3 class="contact-item__title">📋 Equipe / Telefones</h3>
+              <div class="contact-item__text">
+                <div class="contacts-list">
+                  <div class="contact-row">
+                    <span class="contact-name">Márcio Fernandes</span>
+                    <a class="contact-phone" href="tel:+55489998070856">(+55) 48 99807-0856</a>
+                  </div>
+                  <div class="contact-row">
+                    <span class="contact-name">Marcelo Rosa</span>
+                    <a class="contact-phone" href="tel:+55489998070850">(+55) 48 99807-0850</a>
+                  </div>
+                  <div class="contact-row">
+                    <span class="contact-name">Anderson Souza</span>
+                    <a class="contact-phone" href="tel:+55489998070849">(+55) 48 99807-0849</a>
+                  </div>
+                  <div class="contact-row">
+                    <span class="contact-name">Márcio Rosa</span>
+                    <a class="contact-phone" href="tel:+55489998070848">(+55) 48 99807-0848</a>
+                  </div>
+                  <div class="contact-row">
+                    <span class="contact-name">Elton Constante</span>
+                    <a class="contact-phone" href="tel:+55489998070855">(+55) 48 99807-0855</a>
+                  </div>
+                  <div class="contact-row">
+                    <span class="contact-name">Devid Mannes</span>
+                    <a class="contact-phone" href="tel:+55489998070845">(+55) 48 99807-0845</a>
+                  </div>
+                </div>
+                </div>
+              </div>
+          </div>
+
+          <form class="contact__form" id="contactForm">
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Seu nome"
+                required
+                class="form__input"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                placeholder="Seu email"
+                required
+                class="form__input"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                placeholder="Seu telefone"
+                class="form__input"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Sua mensagem"
+                rows="5"
+                required
+                class="form__textarea"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col">
-                    <div class="logo logo--footer">
-                        <img src="img/logo.png" alt="Oroleite" class="logo__img">
-                        <span class="logo__text">Oroleite</span>
-                    </div>
-                    <p class="footer__text">Histórico em distribuição de alimentos com qualidade e confiança</p>
-                </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__title">Navegação</h4>
-                    <ul class="footer__list">
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#empresa">Empresa</a></li>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__title">Produtos</h4>
-                    <ul class="footer__list">
-                        <li><a href="#">Bebidas</a></li>
-                        <li><a href="#">Mercearia</a></li>
-                        <li><a href="#">Congelados</a></li>
-                        <li><a href="#">Limpeza</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__title">Contato</h4>
-                    <ul class="footer__list">
-                        <li><a href="tel:4899999999">(48) 99999-9999</a></li>
-                        <li><a href="mailto:contato@oroleite.com.br">contato@oroleite.com.br</a></li>
-                        <li><a href="#">WhatsApp</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col">
+            <div class="logo logo--footer">
+              <img src="img/logo.png" alt="Oroleite" class="logo__img" />
+              <span class="logo__text">Oroleite</span>
             </div>
+            <p class="footer__text">
+              Histórico em distribuição de alimentos com qualidade e confiança
+            </p>
+          </div>
 
-            <div class="footer__bottom">
-                <p>&copy; 2026 Oroleite. Todos os direitos reservados.</p>
-                <div class="footer__links">
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">Termos de Uso</a>
-                </div>
-            </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Navegação</h4>
+            <ul class="footer__list">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#empresa">Empresa</a></li>
+              <li><a href="#diferenciais">Diferenciais</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__title">Produtos</h4>
+            <ul class="footer__list">
+              <li><a href="#">Bebidas</a></li>
+              <li><a href="#">Mercearia</a></li>
+              <li><a href="#">Congelados</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__title">Contato</h4>
+            <ul class="footer__list">
+              <li><a href="tel:4899999999">(+55) 48 99807-0845</a></li>
+              <li>
+                <a href="mailto:contato@oroleite.com.br"
+                  >oroleite@oroleite.com.br</a
+                >
+              </li>
+              <li><a href="#">WhatsApp</a></li>
+            </ul>
+          </div>
         </div>
+
+        <div class="footer__bottom">
+          <p>&copy; 2026 Oroleite. Todos os direitos reservados.</p>
+          <div class="footer__links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
