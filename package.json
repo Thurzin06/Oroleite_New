@@ -1,0 +1,14 @@
+{
+  "name": "nova-oroleite-test",
+  "version": "1.0.0",
+  "description": "Automated form test for Nova Oroleite site",
+  "main": "test/form-test.js",
+  "scripts": {
+    "test:form": "node test/form-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}
