@@ -1,3 +1,207 @@
+/* ====== SOBRE A OROLEITE - GRID E ESTATÍSTICAS ====== */
+.about__grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.about__content {
+    flex: 1 1 0;
+    min-width: 280px;
+    max-width: 600px;
+}
+.about__image {
+    flex: 1 1 0;
+    min-width: 240px;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+}
+.about__stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 32px;
+}
+.about__stat {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+    padding: 18px 24px 12px 24px;
+    text-align: center;
+    min-width: 110px;
+}
+.stat__number {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #e67e22;
+    margin-bottom: 2px;
+}
+.stat__label {
+    font-size: 1rem;
+    color: #222;
+    opacity: 0.8;
+}
+.about__text {
+    font-size: 1.08rem;
+    color: #222;
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+@media (max-width: 900px) {
+    .about__grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .about__image {
+        max-width: 100%;
+    }
+    .about__stats {
+        gap: 16px;
+        margin-top: 18px;
+    }
+}
+@media (max-width: 600px) {
+    .about__content {
+        padding: 0;
+    }
+    .about__image img {
+        border-radius: 10px;
+    }
+    .about__stats {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    .about__stat {
+        min-width: 0;
+        padding: 12px 10px 8px 10px;
+    }
+}
+/* ====== NOVO GRID CONTATO: DUAS COLUNAS ====== */
+.contact-form-table-grid {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.contact-form-table-grid__col {
+    flex: 1 1 0;
+    min-width: 320px;
+    max-width: 480px;
+}
+
+.contact-form-table-grid__info {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+    padding: 32px 24px 24px 24px;
+    margin-bottom: 0;
+}
+
+.contact-form-table-grid__form {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+    padding: 32px 24px 24px 24px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .contact-form-table-grid {
+        flex-direction: column;
+        gap: 32px;
+        align-items: stretch;
+    }
+    .contact-form-table-grid__col {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form-table-grid__info,
+    .contact-form-table-grid__form {
+        padding: 18px 8px 16px 8px;
+        border-radius: 10px;
+        box-shadow: 0 1px 6px 0 rgba(0,0,0,0.08);
+    }
+    .contact-form-table-grid {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}
+/* ========================================
+     CONTATOS - TABELA VISUAL (ESTILO EXCEL)
+======================================== */
+.contacts-table {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 1.5rem auto;
+    background: none;
+    border-radius: 10px;
+    box-shadow: none;
+    overflow: hidden;
+    font-family: var(--font-secondary);
+}
+.contacts-table__header {
+    display: flex;
+    background: #232b3e;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 2px solid var(--color-primary);
+}
+.contacts-table__th {
+    flex: 1 1 0;
+    text-align: left;
+}
+.contacts-table__row {
+    display: flex;
+    align-items: center;
+    background: #1f2937;
+    color: #fff;
+    font-size: 1rem;
+    border-bottom: 1px solid #232b3e;
+    padding: 0.55rem 1.2rem;
+    transition: background 0.2s;
+}
+.contacts-table__row:last-child {
+    border-radius: 0 0 8px 8px;
+    border-bottom: none;
+}
+.contacts-table__td {
+    flex: 1 1 0;
+    text-align: left;
+    padding: 0.2rem 0.1rem;
+    font-weight: 500;
+}
+.contacts-table__phone {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+@media (max-width: 600px) {
+    .contacts-table {
+        max-width: 100%;
+    }
+    .contacts-table__header, .contacts-table__row {
+        font-size: 0.97rem;
+        padding: 0.45rem 0.5rem;
+    }
+}
 /* ========================================
    DESIGN SYSTEM - CSS VARIABLES
    ======================================== */
@@ -801,26 +1005,11 @@ p {
    CONTACT SECTION
    ======================================== */
 
-.contact__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-12);
+.contacts-list {
+    display: block;
+    width: 100%;
+    padding-bottom: 0.25rem;
 }
-
-.contact__info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-6);
-}
-
-.contact-item {
-    padding: var(--space-4);
-    background: var(--color-gray-100);
-    border-radius: var(--radius-lg);
-}
-
-.contact-item__title {
-    font-size: var(--text-lg);
     color: var(--color-dark);
     margin-bottom: var(--space-2);
 }
@@ -902,24 +1091,53 @@ p {
 }
 
 /* Horizontal contacts list (replacement for table) */
+
 .contacts-list {
     display: flex;
     gap: 0.75rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: stretch;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) #e9ecef;
+}
+
+.contacts-list--scroll::-webkit-scrollbar {
+    height: 8px;
+}
+.contacts-list--scroll::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+}
+.contacts-list--scroll::-webkit-scrollbar-track {
+    background: #e9ecef;
 }
 
 .contact-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
     background: #1f2937;
     color: #fff;
-    padding: 0.45rem 0.75rem;
-    border-radius: 6px;
-    min-width: 260px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 0.55rem 1.2rem;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: box-shadow 0.2s, background 0.2s;
+    flex-wrap: wrap;
+    white-space: normal;
+    overflow-x: visible;
+}
+.contact-row:last-child {
+    margin-bottom: 0;
+}
+.contact-row:hover {
+    box-shadow: 0 8px 24px rgba(255,122,0,0.10);
+    background: #232b3e;
 }
 
 .contact-name {
@@ -934,24 +1152,23 @@ p {
     white-space: nowrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .contacts-list {
         gap: 0.5rem;
     }
     .contact-row {
-        min-width: 200px;
-        padding: 0.35rem 0.6rem;
+        font-size: 0.97rem;
+        padding: 0.38rem 0.7rem;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .contacts-list {
-        display: block;
+        gap: 0.35rem;
     }
     .contact-row {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.5rem;
+        font-size: 0.93rem;
+        padding: 0.32rem 0.5rem;
     }
 }
 

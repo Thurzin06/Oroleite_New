@@ -126,6 +126,10 @@ const contactForm = document.querySelector('#contactForm');
 const toastContainer = document.getElementById('toastContainer');
 const formMessage = document.getElementById('formMessage');
 
+// ========== Segurança: Honeypot anti-spam ==========
+// Adicione um campo hidden no HTML: <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+// Bots costumam preencher esse campo, humanos não.
+
 /* ==========================
    EmailJS Configuration
    Replace placeholders with your EmailJS IDs
@@ -148,77 +152,124 @@ function showToast(message, type = 'success', timeout = 4500) {
     // allow CSS transition
     requestAnimationFrame(() => t.classList.add('show'));
     setTimeout(() => {
-        t.classList.remove('show');
-        setTimeout(() => t.remove(), 300);
-    }, timeout);
-}
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
 
-function showFormMessage(message, type = 'error', timeout = 5000) {
-    if (!formMessage) return;
-    formMessage.textContent = message;
-    formMessage.className = `form-message show form-message--${type}`;
-    // scroll into view if needed
-    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    if (timeout > 0) {
-        setTimeout(() => {
-            formMessage.classList.remove('show');
-        }, timeout);
-    }
-}
+                // ========== Honeypot anti-spam ==========
+                const honeypot = this.querySelector('input[name="website"]');
+                if (honeypot && honeypot.value) {
+                    showFormMessage('Envio bloqueado por suspeita de spam.', 'error');
+                    return;
+                }
 
-if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
+                // Get form values
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
 
-        // Get form values and sanitize/limit lengths
-        const formData = new FormData(this);
-        const raw = Object.fromEntries(formData);
-        const sanitize = (v, max = 1000) => (v ? String(v).trim().slice(0, max) : '');
+                // ========== Validação reforçada ==========
+                if (!data.name || !data.email || !data.message) {
+                    showFormMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
+                    return;
+                }
+                // Nome mínimo 2 letras
+                if (data.name.trim().length < 2) {
+                    showFormMessage('Nome muito curto.', 'error');
+                    return;
+                }
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(data.email)) {
+                    showFormMessage('Por favor, insira um email válido.', 'error');
+                    return;
+                }
+                // Mensagem mínima
+                if (data.message.trim().length < 5) {
+                    showFormMessage('Mensagem muito curta.', 'error');
+                    return;
+                }
 
-        const data = {
-            name: sanitize(raw.name, 100),
-            email: sanitize(raw.email, 254),
-            phone: sanitize(raw.phone, 30),
-            company: sanitize(raw.company, 100),
-            subject: sanitize(raw.subject, 150),
-            message: sanitize(raw.message, 2000)
-        };
+                // ========== UX: Bloqueio de duplo envio ==========
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn ? submitBtn.textContent : null;
+                if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando...'; }
 
-        // Simple validation
-        if (!data.name || !data.email || !data.message) {
-            showFormMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
-            return;
+                // ========== Coleta de variáveis extras ==========
+                // Data/hora local
+                const now = new Date();
+                const date = now.toLocaleDateString('pt-BR');
+                const time = now.toLocaleTimeString('pt-BR');
+                // Página
+                const page_url = window.location.href;
+                // IP (via API pública, fallback '')
+                let user_ip = '';
+                try {
+                    const resp = await fetch('https://api.ipify.org?format=json');
+                    if (resp.ok) {
+                        const ipData = await resp.json();
+                        user_ip = ipData.ip;
+                    }
+                } catch (err) { user_ip = ''; }
+
+                // ========== Segurança extra: Limite de envio por sessão ==========
+                if (window.sessionStorage) {
+                    const lastSent = sessionStorage.getItem('lastContactSent');
+                    if (lastSent && Date.now() - parseInt(lastSent) < 60000) { // 1 min
+                        showFormMessage('Aguarde um minuto antes de enviar novamente.', 'error');
+                        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
+                        return;
+                    }
+                }
+
+                // ========== Fallback mailto ==========
+                const emailjsConfigured = EMAILJS_USER_ID && !EMAILJS_USER_ID.includes('YOUR') &&
+                                        EMAILJS_SERVICE_ID && !EMAILJS_SERVICE_ID.includes('YOUR') &&
+                                        EMAILJS_TEMPLATE_ID && !EMAILJS_TEMPLATE_ID.includes('YOUR');
+
+                if (!emailjsConfigured || typeof emailjs === 'undefined') {
+                    // fallback: open mailto in new window (user must send manual)
+                    const subject = encodeURIComponent('Contato pelo site - ' + data.name);
+                    const body = encodeURIComponent(`Nome: ${data.name}\nTelefone: ${data.phone || ''}\n\n${data.message}`);
+                    const mailto = `mailto:oroleite@oroleite.com.br?subject=${subject}&body=${body}`;
+                    window.open(mailto, '_blank');
+                    showToast('Abra o cliente de e-mail para finalizar o envio.', 'success');
+                    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
+                    this.reset();
+                    return;
+                }
+
+                // ========== Envio via EmailJS ==========
+                const templateParams = {
+                    from_name: data.name,
+                    name: data.name,
+                    reply_to: data.email,
+                    email: data.email,
+                    phone: data.phone || '',
+                    company: data.company || '',
+                    subject: data.subject || '',
+                    message: data.message,
+                    date,
+                    time,
+                    page_url,
+                    user_ip
+                };
+
+                emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                    .then(() => {
+                        showToast('Obrigado! Sua mensagem foi enviada com sucesso.', 'success');
+                        showFormMessage('', 'success', 1);
+                        contactForm.reset();
+                        if (window.sessionStorage) sessionStorage.setItem('lastContactSent', Date.now().toString());
+                    }, (err) => {
+                        console.error('EmailJS error', err);
+                        showFormMessage('Erro ao enviar mensagem. Tente novamente mais tarde.', 'error');
+                        showToast('Erro ao enviar mensagem.', 'error');
+                    })
+                    .finally(() => {
+                        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
+                    });
+            });
         }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(data.email)) {
-            showFormMessage('Por favor, insira um email válido.', 'error');
-            return;
-        }
-
-        // Basic client-side rate limiting: 15s between attempts
-        try {
-            const last = localStorage.getItem('lastSubmitTimestamp');
-            const nowTs = Date.now();
-            if (last && (nowTs - parseInt(last, 10) < 15000)) {
-                showFormMessage('Aguarde alguns segundos antes de enviar novamente.', 'error');
-                return;
-            }
-        } catch (err) {
-            // ignore localStorage errors
-        }
-
-        // Prepare submit button state
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn ? submitBtn.textContent : null;
-        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando...'; }
-
-        // If EmailJS not configured, fallback to mailto (opens client)
-        const emailjsConfigured = EMAILJS_USER_ID && !EMAILJS_USER_ID.includes('YOUR') &&
-                                EMAILJS_SERVICE_ID && !EMAILJS_SERVICE_ID.includes('YOUR') &&
-                                EMAILJS_TEMPLATE_ID && !EMAILJS_TEMPLATE_ID.includes('YOUR');
-
         if (!emailjsConfigured || typeof emailjs === 'undefined') {
             // fallback: open mailto in new window (user must send manually)
             const subject = encodeURIComponent('Contato pelo site - ' + data.name);
