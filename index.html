@@ -519,6 +519,7 @@
             <div class="form-group">
               <input
                 type="text"
+                name="name"
                 placeholder="Seu nome"
                 required
                 class="form__input"
@@ -527,6 +528,7 @@
             <div class="form-group">
               <input
                 type="email"
+                name="email"
                 placeholder="Seu email"
                 required
                 class="form__input"
@@ -535,18 +537,21 @@
             <div class="form-group">
               <input
                 type="tel"
+                name="phone"
                 placeholder="Seu telefone"
                 class="form__input"
               />
             </div>
             <div class="form-group">
               <textarea
+                name="message"
                 placeholder="Sua mensagem"
                 rows="5"
                 required
                 class="form__textarea"
               ></textarea>
             </div>
+            <div id="formMessage" class="form-message" aria-live="polite"></div>
             <button type="submit" class="btn btn--primary btn--block">
               Enviar Mensagem
             </button>
@@ -609,6 +614,9 @@
       </div>
     </footer>
 
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+    <!-- EmailJS SDK (fill your userID in script.js) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
