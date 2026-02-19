@@ -489,6 +489,30 @@ p {
     font-size: var(--text-xl);
 }
 
+/* Header for brand pages: make 'Voltar' button small and near left corner */
+.site-header{
+    position: relative;
+    padding: 12px 0;
+}
+.site-header .logo{
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background: #fff;
+    color: #14202b;
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(6,22,40,0.08);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+}
+.site-header .logo:hover{
+    transform: translateY(-2px);
+}
+
 /* Menu */
 .menu {
     display: flex;
@@ -720,6 +744,17 @@ p {
     margin: 0 auto;
 }
 
+/* Para páginas de marca: título e subtítulo alinhados à esquerda
+   e subtítulo posicionado abaixo do título */
+.section--brand .section__title {
+    text-align: left;
+}
+.section--brand .section__subtitle {
+    text-align: left;
+    margin: 6px 0 0 0;
+    max-width: none;
+}
+
 /* ========================================
    ABOUT SECTION
    ======================================== */
@@ -920,6 +955,166 @@ p {
 .brand-item img {
     max-height: 80px;
     width: auto;
+}
+
+/* ====== PRODUCTS GRID (páginas de marca) ====== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    align-items: start;
+    margin-top: 18px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(18, 38, 63, 0.06);
+    padding: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    object-position: center;
+    background: #fafafa;
+    border-radius: 8px;
+    display: block;
+    padding: 8px 12px;
+    box-sizing: border-box;
+}
+
+.product-card h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .product-card img {
+        height: 130px;
+        padding: 6px 8px;
+    }
+}
+
+/* centralizar imagem dentro do container quando usar object-fit:contain */
+.product-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+/* overlay padronizado dentro da imagem */
+.product-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 60%);
+    color: #fff;
+    text-align: left;
+}
+
+.product-overlay h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+}
+
+.product-overlay p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.95;
+}
+
+/* ====== PRODUCT MODAL ====== */
+.product-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.product-modal.open {
+    display: flex;
+}
+.product-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+}
+.product-modal__dialog {
+    position: relative;
+    width: min(920px, 95%);
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-2xl);
+    overflow: auto;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.product-modal__close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #222;
+}
+.product-modal__media {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+}
+.product-modal__media img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+.product-modal__content {
+    padding: 24px 28px;
+}
+.product-modal__content h3 {
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.product-modal__content p {
+    color: var(--color-gray-600);
+}
+@media (max-width: 800px) {
+    .product-modal__dialog { grid-template-columns: 1fr; }
+    .product-modal__media { padding: 16px; }
+    .product-modal__content { padding: 16px; }
 }
 
 /* ========================================
