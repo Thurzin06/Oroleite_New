@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+[context.production]
+  command = ""
+  publish = "."
+
+[deploy]
+  # deploy branch left empty to allow Netlify UI to control it; creating 'main' branch to match Netlify defaults
