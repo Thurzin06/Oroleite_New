@@ -1018,9 +1018,10 @@ p {
     overflow:hidden;
     border-radius: 8px;
     background: #fafafa;
-    /* altura fixa para uniformizar thumbnails */
+    /* fixed square box so all pictures live in same area */
+    width: 160px;
     height: 160px;
-    /* remove padding so image can fill entire box */
+    margin: 0 auto;
 }
 
 /* overlay padronizado dentro da imagem */
