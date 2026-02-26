@@ -962,9 +962,9 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
-    align-items: start;
+    align-items: stretch; /* ensure cards in the same row share height */
     margin-top: 18px;
-    justify-content: center;
+    justify-content: center; /* center when few items */
 }
 
 .product-card {
@@ -979,6 +979,9 @@ p {
     overflow: hidden;
     max-width: 240px;
     margin: 0 auto;
+    /* make cards grow equally and respect minimum height */
+    flex: 1 1 auto;
+    min-height: 260px;
 }
 
 .product-card img {
@@ -1012,7 +1015,7 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
+    overflow:hidden;
     border-radius: 8px;
     background: #fafafa;
     /* altura fixa para uniformizar thumbnails */
