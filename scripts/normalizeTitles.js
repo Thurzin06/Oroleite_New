@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   function titleize(str){
     if(!str) return '';
-    str = decodeURIComponent(str);
+    try {
+      str = decodeURIComponent(str);
+    } catch(e) {
+      // skip decode if string is malformed
+    }
     // keep only filename if full path
     str = str.replace(/.*[\\\/]/, '');
     // remove extension

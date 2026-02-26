@@ -747,12 +747,12 @@ p {
 /* Para páginas de marca: título e subtítulo alinhados à esquerda
    e subtítulo posicionado abaixo do título */
 .section--brand .section__title {
-    text-align: left;
+    text-align: center;
 }
 .section--brand .section__subtitle {
-    text-align: left;
-    margin: 6px 0 0 0;
-    max-width: none;
+    text-align: center;
+    margin: 6px auto 0;
+    max-width: 600px;
 }
 
 /* ========================================
@@ -1204,7 +1204,7 @@ p {
     display: block;
     width: 100%;
     padding-bottom: 0.25rem;
-
+}
     color: var(--color-dark);
     margin-bottom: var(--space-2);
 }
