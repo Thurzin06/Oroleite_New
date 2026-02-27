@@ -4,11 +4,13 @@
   "description": "Automated form test for Nova Oroleite site",
   "main": "test/form-test.js",
   "scripts": {
-    "test:form": "node test/form-test.js"
+    "test:form": "node test/form-test.js",
+    "generate:categories": "node scripts/generateCategorySections.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
     "puppeteer": "^21.0.0"
   }
 }
