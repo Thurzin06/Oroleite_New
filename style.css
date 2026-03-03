@@ -1038,9 +1038,14 @@ p {
     background: #ffffff;
     border-radius: 28px;
     padding: 28px 26px;
-    margin-bottom: 28px;
+    margin-bottom: 40px;
     box-shadow: 0 12px 36px rgba(8,36,84,0.06);
     border: 1px solid rgba(8,36,84,0.04);
+}
+
+/* additional vertical separation when two subgroups stack */
+.brand-subgroup + .brand-subgroup {
+    margin-top: 40px;
 }
 .brand-subgroup h3 {
     text-align: center;
