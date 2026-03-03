@@ -290,7 +290,7 @@ html {
 
 body {
     font-family: var(--font-secondary);
-    background: #b8b3ae;
+    background: #EBEBEB;
     color: var(--color-dark);
     line-height: 1.6;
     overflow-x: hidden;
@@ -754,6 +754,15 @@ p {
     text-align: center;
     margin: 6px auto 0;
     max-width: 600px;
+}
+
+/* allow a logo image instead of text in brand pages
+   usage: replace or wrap the h2 content with <img src="/img/your-logo.png" alt="Brand name">
+   the image will be centered and limited in height so layout stays consistent */
+.section--brand .section__title img {
+    display: block;
+    margin: 0 auto;
+    max-height: 80px;
 }
 
 /* ========================================
