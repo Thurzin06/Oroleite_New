@@ -1038,15 +1038,14 @@ p {
     background: #ffffff;
     border-radius: 28px;
     padding: 28px 26px;
-    margin-bottom: 40px;
+    /* vertical spacing above and below regardless of intervening elements */
+    margin: 40px 0;
     box-shadow: 0 12px 36px rgba(8,36,84,0.06);
     border: 1px solid rgba(8,36,84,0.04);
 }
 
-/* additional vertical separation when two subgroups stack */
-.brand-subgroup + .brand-subgroup {
-    margin-top: 40px;
-}
+/* the adjacent rule is no longer needed once each box has its own margin */
+/* .brand-subgroup + .brand-subgroup { margin-top: 40px; } */
 .brand-subgroup h3 {
     text-align: center;
     color: #163a72;
