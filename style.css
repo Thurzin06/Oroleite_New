@@ -290,7 +290,7 @@ html {
 
 body {
     font-family: var(--font-secondary);
-    background: var(--color-white);
+    background: #b8b3ae;
     color: var(--color-dark);
     line-height: 1.6;
     overflow-x: hidden;
@@ -494,6 +494,7 @@ p {
     position: relative;
     padding: 12px 0;
 }
+
 .site-header .logo{
     position: absolute;
     left: 12px;
@@ -1032,7 +1033,52 @@ p {
     border-radius: 8px;
 }
 
-.product-overlay {
+/* Brand subgroup styling: visual card wrapper like the provided mock */
+.brand-subgroup {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 28px 26px;
+    margin-bottom: 28px;
+    box-shadow: 0 12px 36px rgba(8,36,84,0.06);
+    border: 1px solid rgba(8,36,84,0.04);
+}
+.brand-subgroup h3 {
+    text-align: center;
+    color: #163a72;
+    font-size: 1.5rem;
+    margin: 0 0 18px 0;
+    font-weight: 700;
+}
+.brand-subgroup .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+.brand-subgroup .product-card {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
+}
+.brand-subgroup .product-media {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px auto;
+    border-radius: 12px;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.brand-subgroup .product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.brand-subgroup .product-overlay {
     position: absolute;
     left: 0;
     right: 0;
