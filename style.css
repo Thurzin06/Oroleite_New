@@ -756,15 +756,6 @@ p {
     max-width: 600px;
 }
 
-/* allow a logo image instead of text in brand pages
-   usage: replace or wrap the h2 content with <img src="/img/your-logo.png" alt="Brand name">
-   the image will be centered and limited in height so layout stays consistent */
-.section--brand .section__title img {
-    display: block;
-    margin: 0 auto;
-    max-height: 80px;
-}
-
 /* ========================================
    ABOUT SECTION
    ======================================== */
@@ -1025,14 +1016,14 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     border-radius: 8px;
     background: #fafafa;
-    /* fixed square box so all pictures live in same area */
-    width: 160px;
-    height: 160px;
+    /* slightly larger square box so product images are clearer */
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
-    padding: 4px 0; /* add vertical padding to balance tall images */
+    padding: 6px 0;
 }
 
 /* overlay padronizado dentro da imagem */
@@ -1076,9 +1067,10 @@ p {
     text-align: center;
 }
 .brand-subgroup .product-media {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 10px auto;
+    /* brand subgroup boxes slightly smaller to create visual hierarchy */
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 12px auto;
     border-radius: 12px;
     background: #fafafa;
     display: flex;
@@ -1086,10 +1078,20 @@ p {
     justify-content: center;
     overflow: hidden;
 }
-.brand-subgroup .product-card img {
-    width: 100%;
-    height: 100%;
+.brand-subgroup .product-card img,
+.product-media img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .product-media { width: 140px; height: 140px; }
+    .brand-subgroup .product-media { width: 120px; height: 120px; }
 }
 .brand-subgroup .product-overlay {
     position: absolute;
@@ -1105,6 +1107,18 @@ p {
 .product-overlay h4 {
     margin: 0 0 4px 0;
     font-size: 1rem;
+}
+
+/* Limit brand logo height inside brand pages so logos don't overflow */
+.section--brand .section__title img {
+    display: block;
+    margin: 0 auto 12px;
+    max-height: 120px;
+    width: auto;
+}
+
+@media (max-width: 800px) {
+    .section--brand .section__title img { max-height: 80px; }
 }
 
 .product-overlay p {
