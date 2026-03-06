@@ -1,3 +1,17 @@
+/* Padroniza logos de subgrupos (ex: Chambinho, Chamyto, Chandelle) */
+.brand-subgroup > img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    max-height: 180px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    box-sizing: border-box !important;
+}
 /* ====== SOBRE A OROLEITE - GRID E ESTATÍSTICAS ====== */
 .about__grid {
     display: flex;
@@ -1111,14 +1125,23 @@ p {
 
 /* Limit brand logo height inside brand pages so logos don't overflow */
 .section--brand .section__title img {
-    display: block;
-    margin: 0 auto 12px;
-    max-height: 120px;
-    width: auto;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    max-height: 100px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    box-sizing: border-box !important;
 }
 
 @media (max-width: 800px) {
-    .section--brand .section__title img { max-height: 80px; }
+    .section--brand .section__title img {
+        max-height: 70px !important;
+    }
 }
 
 .product-overlay p {
