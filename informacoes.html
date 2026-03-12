@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novidades | Oroleite</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 32px auto;
+      overflow: hidden;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .carousel-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-item.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .carousel-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      cursor: pointer;
+      z-index: 2;
+      font-size: 32px;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+    .carousel-control.prev {
+      left: 16px;
+    }
+    .carousel-control.next {
+      right: 16px;
+    }
+    .carousel-control:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .novidades-section h2 {
+      margin-top: 48px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">&larr; Voltar</a>
+      <h1>Novidades</h1>
+    </div>
+  </header>
+  <main class="container">
+    <section class="novidades-section">
+      <h2>Bauducco</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Bauducco+Banner+1" alt="Bauducco Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Bauducco+Banner+2" alt="Bauducco Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Bauducco+Banner+3" alt="Bauducco Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+
+      <h2>Galbani</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Galbani+Banner+1" alt="Galbani Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Galbani+Banner+2" alt="Galbani Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Galbani+Banner+3" alt="Galbani Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+
+      <h2>Life</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="icons/Life - Produtos - Site/Banner Refrigeração.png" alt="Banner Refrigeração">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Life+Banner+2" alt="Life Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Life+Banner+3" alt="Life Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+
+      <h2>Nestlé</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Nestlé+Banner+1" alt="Nestlé Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Nestlé+Banner+2" alt="Nestlé Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Nestlé+Banner+3" alt="Nestlé Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+
+      <h2>NotCo</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=NotCo+Banner+1" alt="NotCo Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=NotCo+Banner+2" alt="NotCo Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=NotCo+Banner+3" alt="NotCo Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+
+      <h2>Peccin</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Peccin+Banner+1" alt="Peccin Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Peccin+Banner+2" alt="Peccin Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Peccin+Banner+3" alt="Peccin Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+
+      <h2>Puri</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Puri+Banner+1" alt="Puri Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Puri+Banner+2" alt="Puri Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Puri+Banner+3" alt="Puri Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+
+      <h2>Viscont</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Viscont+Banner+1" alt="Viscont Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Viscont+Banner+2" alt="Viscont Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Viscont+Banner+3" alt="Viscont Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+
+      <h2>Zinho</h2>
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Zinho+Banner+1" alt="Zinho Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Zinho+Banner+2" alt="Zinho Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Zinho+Banner+3" alt="Zinho Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

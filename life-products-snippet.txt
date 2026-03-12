@@ -1,5 +1,0 @@
-        <div class="product-card"><div class="product-media"><img src="/img/icons/Life/1.jpg" alt="1.jpg" /><div class="product-overlay"><h4>1.jpg</h4></div></div></div>
-        <div class="product-card"><div class="product-media"><img src="/img/icons/Life/2 (1).jpg" alt="2 (1).jpg" /><div class="product-overlay"><h4>2 (1).jpg</h4></div></div></div>
-        <div class="product-card"><div class="product-media"><img src="/img/icons/Life/2.1.jpg" alt="2.1.jpg" /><div class="product-overlay"><h4>2.1.jpg</h4></div></div></div>
-        <div class="product-card"><div class="product-media"><img src="/img/icons/Life/2.5.jpg" alt="2.5.jpg" /><div class="product-overlay"><h4>2.5.jpg</h4></div></div></div>
-        <div class="product-card"><div class="product-media"><img src="/img/icons/Life/4 (1).jpg" alt="4 (1).jpg" /><div class="product-overlay"><h4>4 (1).jpg</h4></div></div></div>

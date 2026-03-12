@@ -1306,10 +1306,10 @@ p {
     display: block;
     width: 100%;
     padding-bottom: 0.25rem;
-}
     color: var(--color-dark);
     margin-bottom: var(--space-2);
 }
+
 
 .contact-item__text {
     font-size: var(--text-base);
