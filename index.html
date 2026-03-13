@@ -356,46 +356,46 @@
         <div class="coverage__content">
          <div id="map" style="height:600px;width:100%;"></div>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<script>
+    <script>
 
-const map = L.map('map').setView([-27.3, -48.6], 8);
+        const map = L.map('map').setView([-27.3, -48.6], 8);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
- maxZoom: 19,
- attribution: '&copy; OpenStreetMap'
-}).addTo(map);
-
-
-// REGIÕES DE ATENDIMENTO
-const regioes = [
-
- {nome:"Sul de SC", lat:-28.677, lon:-49.369, raio:60000},
- {nome:"Grande Florianópolis", lat:-27.595, lon:-48.548, raio:70000},
- {nome:"Vale do Itajaí", lat:-26.919, lon:-49.066, raio:60000},
- {nome:"Norte SC", lat:-26.304, lon:-48.848, raio:60000},
- {nome:"Oeste SC", lat:-27.100, lon:-52.615, raio:70000}
-
-];
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; OpenStreetMap'
+          }).addTo(map);
 
 
-regioes.forEach(regiao => {
+        // REGIÕES DE ATENDIMENTO
+        const regioes = [
 
- L.circle([regiao.lat, regiao.lon], {
+          {nome:"Sul de SC", lat:-28.677, lon:-49.369, raio:60000},
+          {nome:"Grande Florianópolis", lat:-27.595, lon:-48.548, raio:70000},
+          {nome:"Vale do Itajaí", lat:-26.919, lon:-49.066, raio:60000},
+          {nome:"Norte SC", lat:-26.304, lon:-48.848, raio:60000},
+          {nome:"Oeste SC", lat:-27.100, lon:-52.615, raio:70000}
 
-  color: "#007bff",
-  fillColor: "#007bff",
-  fillOpacity: 0.25,
-  radius: regiao.raio
+          ];
 
- }).addTo(map)
-   .bindPopup(regiao.nome);
 
-});
+          regioes.forEach(regiao => {
 
-</script>
+          L.circle([regiao.lat, regiao.lon], {
+
+            color: "#007bff",
+            fillColor: "#007bff",
+            fillOpacity: 0.25,
+            radius: regiao.raio
+
+          }).addTo(map)
+            .bindPopup(regiao.nome);
+
+          });
+
+      </script>
           <!-- <div class="coverage__map">
             <img
               src="https://picsum.photos/600/400?random=30"
@@ -509,7 +509,7 @@ regioes.forEach(regiao => {
             </div>
           </div>
           <div class="contact-form-table-grid__col contact-form-table-grid__form">
-            <form class="contact__form" id="contactForm">
+            <form class="contact__form" id="contactForm" name="contact" method="POST" data-netlify="true">
             <div class="form-group">
               <input
                 type="text"
@@ -545,6 +545,8 @@ regioes.forEach(regiao => {
                 class="form__textarea"
               ></textarea>
             </div>
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
             <div id="formMessage" class="form-message" aria-live="polite"></div>
             <button type="submit" class="btn btn--primary btn--block">
               Enviar Mensagem
@@ -611,8 +613,6 @@ regioes.forEach(regiao => {
     <!-- Feito por 'Arthur da Rosa' -->
 
     <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
-    <!-- EmailJS SDK (fill your userID in script.js) -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
