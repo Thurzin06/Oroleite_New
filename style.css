@@ -1228,19 +1228,22 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-12);
     align-items: start;
+    position: relative;
+    z-index: 1;
 }
 
 .coverage__map {
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    min-height: 420px;
+    min-height: 300px;
+    max-height: 380px;
 }
 
 #map {
     width: 100%;
-    min-height: 420px;
-    height: 100%;
+    height: min(360px, 45vh);
+    min-height: 280px;
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
@@ -1255,7 +1258,7 @@ p {
 
 .coverage__map img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -1263,9 +1266,16 @@ header.header {
     z-index: 2002;
 }
 
-.coverage__content {
-    position: relative;
-    z-index: 1;
+@media (max-width: 1024px) {
+    .coverage__content {
+        grid-template-columns: 1fr;
+    }
+    .coverage__map,
+    #map {
+        min-height: 250px;
+        height: 260px;
+        max-height: 340px;
+    }
 }
 
 
