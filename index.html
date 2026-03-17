@@ -414,6 +414,10 @@
           radius: regiao.raio
         }).addTo(map).bindPopup(regiao.nome);
       });
+
+      // Força Leaflet a recalcular ao inserir no DOM e ao redimensionar
+      setTimeout(() => map.invalidateSize(), 100);
+      window.addEventListener('resize', () => map.invalidateSize());
     </script>
 
     <!-- CTA SECTION -->
