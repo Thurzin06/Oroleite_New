@@ -213,10 +213,36 @@ if (contactForm) {
       }
     }
 
-    // If validation passes, let Netlify handle the form
-    // Netlify will show success message automatically
-    if (window.sessionStorage)
-      sessionStorage.setItem("lastContactSent", Date.now().toString());
+    // If validation passes, send via Formsubmit AJAX
+    e.preventDefault();
+
+    const submitData = new FormData(this);
+    submitData.append("_subject", "Novo contato via site Oroleite");
+    submitData.append("_template", "table");
+    submitData.append("_captcha", "false");
+
+    try {
+      showFormMessage("Enviando mensagem...", "info", 2500);
+      const response = await fetch("https://formsubmit.co/ajax/oroleite@oroleite.com", {
+        method: "POST",
+        body: submitData,
+      });
+
+      const json = await response.json();
+      if (!response.ok) {
+        const errorText = json.error || "Erro no envio. Verifique os campos e tente novamente.";
+        showFormMessage(errorText, "error");
+        return;
+      }
+
+      showFormMessage("Mensagem enviada com sucesso! Verifique seu email.", "success");
+      this.reset();
+      if (window.sessionStorage)
+        sessionStorage.setItem("lastContactSent", Date.now().toString());
+    } catch (error) {
+      showFormMessage("Erro de rede. Tente novamente em instantes.", "error");
+      console.error(error);
+    }
   });
 }
 
