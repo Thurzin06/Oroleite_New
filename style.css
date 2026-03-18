@@ -2027,9 +2027,10 @@ body {
 }
 
 .site-header .logo {
-  position: absolute;
-  left: 8px;
-  top: 8px;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 999;
   transform: none;
   background: #fff;
   color: #1d2a4e;
