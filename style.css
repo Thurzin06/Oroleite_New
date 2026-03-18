@@ -2031,7 +2031,7 @@ body {
   left: 10px;
   top: 10px;
   z-index: 999;
-  transform: none;
+  transform: translateY(0);
   background: #fff;
   color: #1d2a4e;
   border-radius: 999px;
@@ -2039,6 +2039,14 @@ body {
   font-weight: 700;
   text-decoration: none;
   box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-header .logo:hover {
+  background-color: #1d2a4e;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.22);
 }
 
 .site-header h1 {
