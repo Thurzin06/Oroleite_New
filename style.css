@@ -2028,9 +2028,9 @@ body {
 
 .site-header .logo {
   position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 8px;
+  top: 8px;
+  transform: none;
   background: #fff;
   color: #1d2a4e;
   border-radius: 999px;
