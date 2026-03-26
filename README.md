@@ -1,1 +1,1 @@
-Link: oroleitenew.netlify.app
+oroleitenew.netlify.app
