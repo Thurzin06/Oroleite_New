@@ -17,8 +17,8 @@ function nextSlide() {
   showSlide(currentSlide);
 }
 
-// Auto-rotate hero slides every 8 seconds
-let heroInterval = setInterval(nextSlide, 8000);
+// Auto-rotate hero slides every 5 seconds
+let heroInterval = setInterval(nextSlide, 5000);
 
 // Pause on hover
 hero.addEventListener("mouseenter", () => {
@@ -27,7 +27,7 @@ hero.addEventListener("mouseenter", () => {
 
 hero.addEventListener("mouseleave", () => {
   clearInterval(heroInterval);
-  heroInterval = setInterval(nextSlide, 8000);
+  heroInterval = setInterval(nextSlide, 5000);
 });
 
 /* ========================================
@@ -53,29 +53,42 @@ window.addEventListener("scroll", () => {
    MOBILE MENU TOGGLE
    ======================================== */
 
-const menuToggle = document.getElementById("menuToggle");
-const menu = document.getElementById("menu");
+function initMobileMenu() {
+  const menuToggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("menu");
 
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active");
-  menu.classList.toggle("active");
-});
+  if (!menuToggle || !menu) return;
 
-// Close menu when clicking on a link
-document.querySelectorAll(".menu__link").forEach((link) => {
-  link.addEventListener("click", () => {
-    menuToggle.classList.remove("active");
-    menu.classList.remove("active");
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
-});
 
-// Close menu when clicking outside
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".menu-toggle") && !e.target.closest(".menu")) {
-    menuToggle.classList.remove("active");
-    menu.classList.remove("active");
-  }
-});
+  // Close menu when clicking on a link
+  document.querySelectorAll(".menu__link").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.classList.remove("active");
+      menu.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-toggle") && !e.target.closest(".menu")) {
+      menuToggle.classList.remove("active");
+      menu.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initMobileMenu);
+} else {
+  initMobileMenu();
+}
 
 /* ========================================
    SMOOTH SCROLL FOR ANCHOR LINKS
@@ -154,7 +167,7 @@ function showFormMessage(message, type = "error", timeout = 5000) {
 
 // Initialize form handling
 if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
+  contactForm.addEventListener("submit", async function (e) {
     // Don't prevent default - let Netlify handle it
     // But add validation first
 
