@@ -230,13 +230,13 @@ if (contactForm) {
     e.preventDefault();
 
     const submitData = new FormData(this);
-    submitData.append("_subject", "Novo contato via site Oroleite");
+    submitData.append("_subject", "Novo contato via site");
     submitData.append("_template", "table");
     submitData.append("_captcha", "false");
 
     try {
       showFormMessage("Enviando mensagem...", "info", 2500);
-      const response = await fetch("https://formsubmit.co/ajax/oroleite@oroleite.com", {
+      const response = await fetch("https://formsubmit.co/ajax/contato@suaempresa.com.br", {
         method: "POST",
         body: submitData,
       });

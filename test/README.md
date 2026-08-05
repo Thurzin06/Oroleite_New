@@ -3,14 +3,14 @@ Instruções rápidas para rodar o teste automatizado (Windows):
 1) No projeto, inicie um servidor estático a partir da raiz (porta 8000):
 
 ```powershell
-cd "c:\Users\Comercial05\Desktop\Nova Oroleite"
+cd "caminho\para\o\projeto"
 python -m http.server 8000
 ```
 
 2) Em outro terminal, instale dependências e execute o teste:
 
 ```powershell
-cd "c:\Users\Comercial05\Desktop\Nova Oroleite"
+cd "caminho\para\o\projeto"
 npm install
 npm run test:form
 ```

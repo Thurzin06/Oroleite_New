@@ -12,7 +12,7 @@
   object-fit: contain !important;
   box-sizing: border-box !important;
 }
-/* ====== SOBRE A OROLEITE - GRID E ESTATÍSTICAS ====== */
+/* ====== SOBRE A EMPRESA - GRID E ESTATÍSTICAS ====== */
 .about__grid {
   display: flex;
   align-items: flex-start;
@@ -674,6 +674,19 @@ p {
   object-position: center;
 }
 
+.hero-slide__img--gradient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary-dark) 55%, var(--color-primary) 100%);
+}
+
+.hero-slide__icon {
+  width: 40%;
+  max-width: 420px;
+  color: rgba(255, 255, 255, 0.08);
+}
+
 .hero-slide__overlay {
   position: absolute;
   top: 0;
@@ -848,6 +861,20 @@ p {
   box-shadow: var(--shadow-xl);
 }
 
+.about__image--placeholder {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+}
+
+.about__placeholder-icon {
+  width: 30%;
+  max-width: 140px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .image-cover {
   width: 100%;
   height: 400px;
@@ -959,6 +986,19 @@ p {
   height: 200px;
   overflow: hidden;
   background: var(--color-gray-200);
+}
+
+.card__image--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+}
+
+.card__image--icon svg {
+  width: 56px;
+  height: 56px;
+  color: white;
 }
 
 .card__image img {

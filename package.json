@@ -1,7 +1,7 @@
 {
-  "name": "nova-oroleite-test",
+  "name": "distribuidora-premium-template",
   "version": "1.0.0",
-  "description": "Automated form test for Nova Oroleite site",
+  "description": "Automated form test for the distributor site template",
   "main": "test/form-test.js",
   "scripts": {
     "test:form": "node test/form-test.js"

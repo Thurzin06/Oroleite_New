@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oroleite - Distribuidora de Alimentos Premium</title>
+    <title>Distribuidora Premium - Modelo de Site para Distribuidoras</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,17 +12,20 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="icon" href="img/logo.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png" />
-    <link rel="apple-touch-icon" href="img/logo.png" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%23ff7a00%22/><path d=%22M4 16V8a1 1 0 0 1 1-1h9v9%22 stroke=%22white%22 stroke-width=%221.6%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><path d=%22M14 11h3.5l2.5 3v2h-6z%22 stroke=%22white%22 stroke-width=%221.6%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><circle cx=%227.5%22 cy=%2217%22 r=%221.6%22 fill=%22white%22/><circle cx=%2217%22 cy=%2217%22 r=%221.6%22 fill=%22white%22/></svg>" />
   </head>
   <body>
     <!-- HEADER -->
     <header class="header" id="header">
       <div class="header__container">
         <a href="#" class="logo">
-          <img src="img/logo.png" alt="Oroleite logo" class="logo__img" />
-          <span class="logo__text"></span>
+          <svg class="logo__img" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 16V8a1 1 0 0 1 1-1h9v9" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 11h3.5l2.5 3v2h-6z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7.5" cy="17" r="1.6" fill="white"/>
+            <circle cx="17" cy="17" r="1.6" fill="white"/>
+          </svg>
+          <span class="logo__text">Distribuidora Premium</span>
         </a>
 
         <nav class="menu" id="menu">
@@ -30,10 +33,8 @@
           <a href="#empresa" class="menu__link">Empresa</a>
           <a href="#diferenciais" class="menu__link">Diferenciais</a>
           <a href="#categorias" class="menu__link">Categorias</a>
-          <a href="#marcas" class="menu__link">Marcas</a>
           <a href="#cobertura" class="menu__link">Cobertura</a>
           <a href="#contato" class="menu__link">Contato</a>
-          <!-- <a href="informacoes.html" class="menu__link">Novidades / Produtos</a> -->
         </nav>
 
         <button type="button" class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
@@ -49,16 +50,19 @@
     <section class="hero" id="inicio">
       <div class="hero__slider" id="heroSlider">
         <div class="hero-slide active">
-          <img
-            src="icons/FundoEntrega.png"
-            alt="Grandes marcas de distribuição"
-            class="hero-slide__img"
-          />
+          <div class="hero-slide__img hero-slide__img--gradient" aria-hidden="true">
+            <svg class="hero-slide__icon" viewBox="0 0 24 24" fill="none">
+              <path d="M4 16V8a1 1 0 0 1 1-1h9v9" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 11h3.5l2.5 3v2h-6z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="7.5" cy="17" r="1.6" fill="currentColor"/>
+              <circle cx="17" cy="17" r="1.6" fill="currentColor"/>
+            </svg>
+          </div>
           <div class="hero-slide__overlay"></div>
           <div class="hero-slide__content">
-            <h1 class="hero-slide__title">Distribuindo Para Grandes Marcas!</h1>
+            <h1 class="hero-slide__title">Distribuição com Excelência!</h1>
             <p class="hero-slide__subtitle">
-              7 anos distribuindo produtos alimentícios com excelência
+              Anos de experiência distribuindo produtos com qualidade
             </p>
             <a href="#contato" class="btn btn--primary btn--lg"
               >Entrar Em Contato</a
@@ -109,30 +113,32 @@
       <div class="container">
         <div class="about__grid">
           <div class="about__content">
-            <h1>Sobre a Oroleite</h1>
+            <h1>Sobre a Distribuidora Premium</h1>
             <p class="about__text">
-              A Oroleite é uma distribuidora de alimentos especializada em fornecer produtos de qualidade premium para estabelecimentos comerciais em toda a região. Com mais de 7 anos de atuação, consolidamos nossa reputação através de atendimento exemplar, produtos selecionados e logística eficiente.
+              Este é um modelo de site institucional para distribuidoras de alimentos, com espaço para apresentar a empresa, seus diferenciais e sua área de atuação para estabelecimentos comerciais.
             </p>
-            <p class="about__text"><b>Missão:</b> Ser a principal empresa de distribuição de alimentos em Santa Catarina, promovendo o crescimento e o desenvolvimento de nossos colaboradores. Atuamos com honestidade, justiça e integridade em todas as nossas ações.</p>
-            <p class="about__text"><b>Visão:</b> Ser reconhecida como uma empresa ágil, determinada, inovadora e eficiente, destacando-se entre as melhores distribuidoras catarinenses de marcas premium. Nossa meta é ser vista como uma empresa dinâmica, coerente e ética, que mantém relacionamentos sólidos e de confiança com clientes, consumidores, fornecedores, colaboradores e a comunidade em que estamos inseridos.</p>
+            <p class="about__text"><b>Missão:</b> Espaço reservado para a missão da empresa — o que ela busca entregar para clientes, colaboradores e parceiros.</p>
+            <p class="about__text"><b>Visão:</b> Espaço reservado para a visão da empresa — onde ela quer chegar e como pretende se destacar no mercado.</p>
 
             <div class="about__stats">
               <div class="about__stat">
-                <h3 class="stat__number">7+</h3>
+                <h3 class="stat__number">X+</h3>
                 <p class="stat__label">Anos de experiência</p>
               </div>
               <div class="about__stat">
-                <h3 class="stat__number">1.500+</h3>
+                <h3 class="stat__number">X+</h3>
                 <p class="stat__label">Clientes satisfeitos</p>
               </div>
               <div class="about__stat">
-                <h3 class="stat__number">15+</h3>
+                <h3 class="stat__number">X+</h3>
                 <p class="stat__label">Marcas parceiras</p>
               </div>
             </div>
           </div>
-            <div class="about__image">
-            <img src="img/Empresa.jpeg" alt="Equipe Oroleite" class="image-cover" />
+            <div class="about__image about__image--placeholder">
+            <svg class="about__placeholder-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 11h.01M15 11h.01M9 15h.01M15 15h.01" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -142,7 +148,7 @@
     <section class="section differentials" id="diferenciais">
       <div class="container">
         <div class="section__header">
-          <h2 class="section__title">Por que escolher a Oroleite?</h2>
+          <h2 class="section__title">Por que escolher a gente?</h2>
         </div>
 
         <div class="cards-grid cards-grid--3">
@@ -267,81 +273,46 @@
 
         <div class="cards-grid cards-grid--4">
           <div class="card card-category">
-            <div class="card__image">
-              <img src="icons/Bebidas.png" alt="Bebidas" />
+            <div class="card__image card__image--icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M8 2h8l-1 4H9L8 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.5 6 7 20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l-1.5-14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.7 13h8.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
             </div>
             <h3 class="card__title">Bebidas</h3>
             <p class="card__text">
               Bebidas variadas para todos os gostos e ocasiões
             </p>
-            <a href="#marcas" class="card__link">Consultar →</a>
+            <a href="#contato" class="card__link">Consultar →</a>
           </div>
 
           <div class="card card-category">
-            <div class="card__image">
-              <img
-                src="icons/secos.png"
-                alt="Secos"
-              />
+            <div class="card__image card__image--icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3.5" y="8" width="17" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M3.5 8 12 3l8.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 8v12" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
             </div>
             <h3 class="card__title">Secos</h3>
             <p class="card__text">
               Produtos secos de excelente qualidade
             </p>
-            <a href="#marcas" class="card__link">Consultar →</a>
+            <a href="#contato" class="card__link">Consultar →</a>
           </div>
 
           <div class="card card-category">
-            <div class="card__image">
-              <img
-                src="icons/Resfriados.png"
-                alt="Resfriados"
-              />
+            <div class="card__image card__image--icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2v20M4.2 6l15.6 12M19.8 6 4.2 18M2 12h20M6 3.5l3 3M18 3.5l-3 3M6 20.5l3-3M18 20.5l-3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
             </div>
             <h3 class="card__title">Resfriados</h3>
             <p class="card__text">
               Alimentos resfriados mantendo a melhor qualidade
             </p>
-            <a href="#marcas" class="card__link">Consultar →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BRANDS SECTION -->
-    <section class="section brands" id="marcas">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title">Marcas Parceiras</h2>
-        </div>
-
-        <div class="brands-showcase">
-          <div class="brand-item">
-            <a href="brands/nestle.html"><img src="icons/nestle1.png" alt="Nestlé" /></a>
-          </div>
-          <div class="brand-item">
-            <a href="brands/peccin.html"><img src="icons/peccin.png" alt="Peccin" /></a>
-          </div>
-          <div class="brand-item">
-            <a href="brands/bauducco.html"><img src="icons/bauducco.png" alt="Bauduco" /></a>
-          </div>
-          <div class="brand-item">
-            <a href="brands/life.html"><img src="icons/life.png" alt="Life" /></a>
-          </div>
-          <div class="brand-item">
-            <a href="brands/puri.html"><img src="icons/puri.png" alt="Puri" /></a>
-          </div>
-          <div class="brand-item">
-            <a href="brands/zinho.html"><img src="icons/zinho.png" alt="Zinho" /></a>
-          </div>
-          <div class="brand-item">
-            <a href="brands/galbani.html"><img src="icons/galbani-logo.png" alt="Galbani" /></a>
-          </div>
-          <div class="brand-item">
-            <a href="brands/notco.html"><img src="icons/Logo NotCo (1).jpg" alt="NotCo" /></a>
-          </div>
-          <div class="brand-item">
-            <a href="brands/viscont.html"><img src="icons/viscont.png" alt="Viscont" /></a>
+            <a href="#contato" class="card__link">Consultar →</a>
           </div>
         </div>
       </div>
@@ -361,8 +332,8 @@
           <div class="coverage__info">
             <h3 class="coverage__title">Abrangência Regional</h3>
             <p class="coverage__text">
-              Operamos em toda a região, garantindo entregas pontuais e
-              eficientes para sua localização.
+              Exemplo de mapa de cobertura — mostra a região onde a distribuidora
+              atende, com entregas pontuais e eficientes.
             </p>
 
             <ul class="coverage__list">
@@ -453,11 +424,11 @@
           <div class="contact-form-table-grid__col contact-form-table-grid__info">
             <div class="contact-item">
               <h3 class="contact-item__title">📧 Email</h3>
-              <p class="contact-item__text"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=oroleite@oroleite.com.br" target="_blank" rel="noopener">oroleite@oroleite.com.br</a></p><br>
+              <p class="contact-item__text">contato@suaempresa.com.br</p><br>
             </div>
             <div class="contact-item">
               <h3 class="contact-item__title">📍 Localização</h3>
-              <p class="contact-item__text">R. Araponga, 175 - Praça, Tijucas - SC, 88200-000</p><br>
+              <p class="contact-item__text">Rua Exemplo, 123 - Bairro - Cidade - UF, 00000-000</p><br>
             </div>
             <div class="contact-item">
               <h3 class="contact-item__title">⏰ Horário</h3>
@@ -466,49 +437,14 @@
               </p>
             </div>
             <div class="contact-item">
-              <h3 class="contact-item__title">📋 Equipe / Telefones</h3><br>
-              <div class="contact-item__text">
-                <div class="contacts-table">
-                  <div class="contacts-table__header">
-                    <span class="contacts-table__th">Nome</span>
-                    <span class="contacts-table__th">Número</span>
-                  </div>
-                  <div class="contacts-table__row">
-                    <span class="contacts-table__td">Márcio Fernandes</span>
-                    <a class="contacts-table__td contacts-table__phone" href="https://wa.me/5547996753528?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener">(+55) 47 99675-3528</a>
-                  </div>
-                  <div class="contacts-table__row">
-                    <span class="contacts-table__td">Marcelo Rosa</span>
-                    <a class="contacts-table__td contacts-table__phone" href="https://wa.me/5548999056695?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener">(+55) 48 99905-6695</a>
-                  </div>
-                  <div class="contacts-table__row">
-                    <span class="contacts-table__td">Anderson Souza</span>
-                    <a class="contacts-table__td contacts-table__phone" href="https://wa.me/5548988183901?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener">(+55) 48 98818-3901</a>
-                  </div>
-                  <div class="contacts-table__row">
-                    <span class="contacts-table__td">Márcio Rosa</span>
-                    <a class="contacts-table__td contacts-table__phone" href="https://wa.me/554899411996?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener">(+55) 48 99941-1996</a>
-                  </div>
-                  <div class="contacts-table__row">
-                    <span class="contacts-table__td">Elton Constante</span>
-                    <a class="contacts-table__td contacts-table__phone" href="https://wa.me/554891819532?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener">(+55) 48 99181-9532</a>
-                  </div>
-                  <div class="contacts-table__row">
-                    <span class="contacts-table__td">Deivid Mannes</span>
-                    <a class="contacts-table__td contacts-table__phone" href="https://wa.me/5548984349223?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener">(+55) 48 98434-9223</a>
-                  </div>
-                  <div class="contacts-table__row">
-                    <span class="contacts-table__td">João Wiggers</span>
-                    <a class="contacts-table__td contacts-table__phone" href="https://wa.me/554896827141?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener">(+55) 48 99682-7141</a>
-                </div>
-                </div>
-              </div>
+              <h3 class="contact-item__title">📞 Telefone</h3><br>
+              <p class="contact-item__text">(00) 00000-0000</p>
             </div>
           </div>
           <div class="contact-form-table-grid__col contact-form-table-grid__form">
-            <form class="contact__form" id="contactForm" name="contact" action="https://formsubmit.co/oroleite@oroleite.com.br" method="POST">
+            <form class="contact__form" id="contactForm" name="contact" action="https://formsubmit.co/contato@suaempresa.com.br" method="POST">
               <input type="hidden" name="_next" value="/index.html#contato" />
-              <input type="hidden" name="_subject" value="Novo contato via site Oroleite" />
+              <input type="hidden" name="_subject" value="Novo contato via site" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
               <div class="form-group">
@@ -563,11 +499,16 @@
         <div class="footer__grid">
           <div class="footer__col">
             <div class="logo logo--footer">
-              <img src="img/logo.png" alt="Oroleite" class="logo__img" />
-              <span class="logo__text">Oroleite</span>
+              <svg class="logo__img" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 16V8a1 1 0 0 1 1-1h9v9" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 11h3.5l2.5 3v2h-6z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="7.5" cy="17" r="1.6" fill="white"/>
+                <circle cx="17" cy="17" r="1.6" fill="white"/>
+              </svg>
+              <span class="logo__text">Distribuidora Premium</span>
             </div>
             <p class="footer__text">
-              Histórico em distribuição de alimentos com qualidade e confiança
+              Modelo de site institucional para distribuidoras de alimentos
             </p>
           </div>
 
@@ -593,16 +534,14 @@
           <div class="footer__col">
             <h4 class="footer__title">Contato</h4>
             <ul class="footer__list">
-              <li><a href="https://wa.me/55489998070845" target="_blank" rel="noopener">(+55) 48 99807-0845</a></li>
-              <li>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=oroleite@oroleite.com.br" target="_blank" rel="noopener">oroleite@oroleite.com.br</a>
-              </li>
+              <li>(00) 00000-0000</li>
+              <li>contato@suaempresa.com.br</li>
             </ul>
           </div>
         </div>
 
         <div class="footer__bottom">
-          <p>&copy; 2026 Oroleite. Todos os direitos reservados.</p>
+          <p>&copy; 2026 Distribuidora Premium. Modelo de site — todos os direitos reservados.</p>
           <div class="footer__links">
             <a href="#">Política de Privacidade</a>
             <a href="#">Termos de Uso</a>
